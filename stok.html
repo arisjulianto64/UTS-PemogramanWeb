@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Katalog Stok | Arisora</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="stok">
+  <header class="topbar">
+    <a class="brand" href="dashboard.html"><span class="brand-icon"><svg class="arisora-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 11.5c7-2.1 13.1-.8 19 4.1v23c-5.9-4.9-12-6.2-19-4.1z"/><path d="M43 11.5c-7-2.1-13.1-.8-19 4.1v23c5.9-4.9 12-6.2 19-4.1z"/><path d="M24 15.6v23M10 17c4.3-.4 7.5.5 10.5 2.4M38 17c-4.3-.4-7.5.5-10.5 2.4"/></svg></span><span>Arisora<small>BOOKSTORE</small></span></a>
+    <nav aria-label="Navigasi utama">
+      <a href="dashboard.html" >Dashboard</a>
+      <a href="stok.html" aria-current="page">Katalog</a>
+      <a href="checkout.html" >Pemesanan</a>
+      <a href="tracking.html" >Tracking</a>
+      <button type="button" class="link" id="btnLogout">Keluar</button>
+    </nav>
+  </header>
+  <main class="wrap catalog-page">
+    <section class="catalog-hero">
+      <div><p class="eyebrow"> THE ARISORA COLLECTION</p><h1>Temukan cerita<br><em>favoritmu.</em></h1>
+      <p>Jelajahi pilihan buku pilihan untuk menemani ide, mimpi, dan perjalanan barumu.</p>
+      <div class="catalog-hero-pills"><span>Koleksi pilihan</span><span>Banyak kategori</span><span>Pesan mudah</span></div></div>
+      <div class="hero-books" aria-hidden="true"><div class="floating-book book-back"><b>IDEAS</b><small>THE ART OF THINKING</small></div><div class="floating-book book-front"><span>ARISORA<br>EDITION</span><b>THE<br>WORLD OF<br>KNOWLEDGE</b><small>READ • LEARN • GROW</small></div><div class="hero-spark"></div></div>
+    </section>
+    <section class="catalog-tools">
+      <div><p class="eyebrow">OUR LIBRARY</p><h1>Jelajahi Katalog</h1><p class="muted">Pilih buku yang paling cocok untuk perjalananmu.</p></div>
+      <div class="catalog-search"><input type="search" id="cari" placeholder="Cari judul atau kode buku..." aria-label="Cari buku"><select id="filterKategori" aria-label="Filter kategori"><option value="">Semua kategori</option><option>Teknologi</option><option>Desain</option><option>Sains</option><option>Bisnis</option><option>Novel</option><option>Lainnya</option></select></div>
+    </section>
+    <section class="panel" aria-labelledby="hTambah">
+      <h2 id="hTambah">Tambah stok baru</h2>
+      <form id="formStok" class="grid-form" novalidate>
+        <div><label for="kode">Kode</label><input id="kode" placeholder="BK007"></div>
+        <div class="span2"><label for="judul">Judul buku</label><input id="judul"></div>
+        <div><label for="kategori">Kategori</label>
+          <select id="kategori"><option>Teknologi</option><option>Desain</option><option>Sains</option><option>Bisnis</option><option>Novel</option><option>Lainnya</option></select></div>
+        <div><label for="harga">Harga (Rp)</label><input type="number" id="harga" min="1000"></div>
+        <div><label for="stok">Stok</label><input type="number" id="stok" min="0"></div>
+        <div class="align-end"><button class="btn primary block">Tambah baris</button></div>
+      </form>
+      <small class="error" id="errStok"></small>
+    </section>
+    <section class="catalog-results" aria-labelledby="hDaftar">
+      <div class="catalog-results-head"><h2 id="hDaftar">Pilihan untuk dibaca</h2><span id="jumlahBuku" class="muted"></span></div>
+      <div id="gridBuku" class="book-grid" aria-live="polite"></div>
+      <button class="btn reset-catalog" id="resetStok" type="button">Kembalikan data awal</button>
+    </section>
+  </main>
+  <footer class="foot"><small> ARISORA BOOKSTORE · Temukan cerita, mulai perjalanan baru. · © 2026</small></footer>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

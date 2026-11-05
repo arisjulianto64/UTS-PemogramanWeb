@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Masuk | Arisora</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login" class="login-body">
+  <main class="login-card">
+    <header>
+      <div class="login-brand-icon"><svg class="arisora-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 11.5c7-2.1 13.1-.8 19 4.1v23c-5.9-4.9-12-6.2-19-4.1z"/><path d="M43 11.5c-7-2.1-13.1-.8-19 4.1v23c5.9-4.9 12-6.2 19-4.1z"/><path d="M24 15.6v23M10 17c4.3-.4 7.5.5 10.5 2.4M38 17c-4.3-.4-7.5.5-10.5 2.4"/></svg></div><p class="eyebrow">WELCOME TO</p><h1>Arisora</h1>
+      <p>Masuk dan mulai perjalanan di dunia penuh cerita.</p>
+    </header>
+    <form id="formLogin" novalidate>
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Email" autocomplete="username">
+      <small class="error" id="errEmail"></small>
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+      <small class="error" id="errPassword"></small>
+      <button type="submit" class="btn primary block">Login</button>
+    </form>
+    <div class="row-links">
+      <button type="button" class="link" data-open="modalLupa">Lupa Password</button>
+      <button type="button" class="link" data-open="modalDaftar">Daftar</button>
+    </div>
+    <p class="hint">Akun demo: aris.julianto@gmail.com / 123456</p>
+  </main>
+
+  <div class="modal" id="modalLupa" role="dialog" aria-modal="true" aria-labelledby="tLupa" hidden>
+    <div class="modal-box">
+      <h2 id="tLupa">Lupa Password</h2>
+      <form id="formLupa" novalidate>
+        <label for="lupaEmail">Email terdaftar</label>
+        <input type="email" id="lupaEmail">
+        <small class="error"></small>
+        <div class="actions"><button type="button" class="btn" data-close>Batal</button><button class="btn primary">Kirim tautan reset</button></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="modalDaftar" role="dialog" aria-modal="true" aria-labelledby="tDaftar" hidden>
+    <div class="modal-box">
+      <h2 id="tDaftar">Daftar Akun</h2>
+      <form id="formDaftar" novalidate>
+        <label for="dNama">Nama lengkap</label><input id="dNama">
+        <label for="dEmail">Email</label><input type="email" id="dEmail">
+        <label for="dPass">Password (min. 6 karakter)</label><input type="password" id="dPass">
+        <small class="error"></small>
+        <div class="actions"><button type="button" class="btn" data-close>Batal</button><button class="btn primary">Daftar</button></div>
+      </form>
+    </div>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

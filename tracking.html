@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tracking Pengiriman | Arisora</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tracking">
+  <header class="topbar">
+    <a class="brand" href="dashboard.html"><span class="brand-icon"><svg class="arisora-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 11.5c7-2.1 13.1-.8 19 4.1v23c-5.9-4.9-12-6.2-19-4.1z"/><path d="M43 11.5c-7-2.1-13.1-.8-19 4.1v23c5.9-4.9 12-6.2 19-4.1z"/><path d="M24 15.6v23M10 17c4.3-.4 7.5.5 10.5 2.4M38 17c-4.3-.4-7.5.5-10.5 2.4"/></svg></span><span>Arisora<small>BOOKSTORE</small></span></a>
+    <nav aria-label="Navigasi utama">
+      <a href="dashboard.html" >Dashboard</a>
+      <a href="stok.html" >Katalog</a>
+      <a href="checkout.html" >Pemesanan</a>
+      <a href="tracking.html" aria-current="page">Tracking</a>
+      <button type="button" class="link" id="btnLogout">Keluar</button>
+    </nav>
+  </header>
+  <main class="wrap narrow">
+    <h1>Informasi Pengiriman</h1>
+    <section class="panel">
+      <form id="formTrack" class="inline-form" novalidate>
+        <div class="grow"><label for="noDO">Nomor Delivery Order</label><input id="noDO" placeholder="contoh: DO2026002"></div>
+        <button class="btn primary">Cari</button>
+      </form>
+      <small class="error" id="errTrack"></small>
+      <p class="hint">Nomor contoh: DO2026001, DO2026002, DO2026003</p>
+    </section>
+    <section class="panel" id="hasil" hidden aria-live="polite">
+      <h2 id="hNama"></h2>
+      <p>Status: <strong id="hStatus" class="badge"></strong></p>
+      <ol class="steps" id="steps"></ol>
+      <dl class="detail" id="detail"></dl>
+    </section>
+  </main>
+  <footer class="foot"><small>✦ ARISORA BOOKSTORE · Temukan cerita, mulai perjalanan baru. · © 2026</small></footer>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
